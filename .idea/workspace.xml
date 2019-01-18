@@ -17,24 +17,6 @@
   <component name="FileEditorManager">
     <leaf>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/composer.json">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="331">
-              <caret line="65" column="9" selection-start-line="65" selection-start-column="9" selection-end-line="65" selection-end-column="9" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/config/ide-helper.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="26" selection-start-line="26" selection-end-line="26" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/views/chat.blade.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="187">
@@ -55,13 +37,43 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/js/components/MessageComponent.vue">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="239">
               <caret line="17" column="45" selection-start-line="17" selection-start-column="45" selection-end-line="17" selection-end-column="45" />
             </state>
           </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/config/app.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="239">
+              <caret line="173" column="8" selection-start-line="173" selection-start-column="8" selection-end-line="173" selection-end-column="8" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/config/broadcasting.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-357" />
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/.env">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="296">
+              <caret line="36" lean-forward="true" selection-start-line="36" selection-end-line="36" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/Providers/EventServiceProvider.php">
+          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
@@ -98,6 +110,7 @@
         <option value="$PROJECT_DIR$/resources/js/app.js" />
         <option value="$PROJECT_DIR$/resources/views/chat.blade.php" />
         <option value="$PROJECT_DIR$/resources/js/components/MessageComponent.vue" />
+        <option value="$PROJECT_DIR$/config/app.php" />
       </list>
     </option>
   </component>
@@ -205,6 +218,8 @@
       <path value="$PROJECT_DIR$/vendor/seld/phar-utils" />
       <path value="$PROJECT_DIR$/vendor/justinrainbow/json-schema" />
       <path value="$PROJECT_DIR$/vendor/barryvdh/laravel-ide-helper" />
+      <path value="$PROJECT_DIR$/vendor/paragonie/sodium_compat" />
+      <path value="$PROJECT_DIR$/vendor/pusher/pusher-php-server" />
     </include_path>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
@@ -225,6 +240,22 @@
             <path>
               <item name="lar-chat" type="b2602c69:ProjectViewProjectNode" />
               <item name="lar-chat" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="lar-chat" type="b2602c69:ProjectViewProjectNode" />
+              <item name="lar-chat" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="lar-chat" type="b2602c69:ProjectViewProjectNode" />
+              <item name="lar-chat" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="Providers" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="lar-chat" type="b2602c69:ProjectViewProjectNode" />
+              <item name="lar-chat" type="462c0819:PsiDirectoryNode" />
+              <item name="config" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="lar-chat" type="b2602c69:ProjectViewProjectNode" />
@@ -298,12 +329,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1547803391725</updated>
-      <workItem from="1547803394117" duration="10234000" />
+      <workItem from="1547803394117" duration="10430000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="10234000" />
+    <option name="totallyTimeSpent" value="10430000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -316,15 +347,16 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="npm" side_tool="true" />
       <window_info id="Favorites" side_tool="true" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24966443" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24966443" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" />
       <window_info anchor="bottom" id="Version Control" />
-      <window_info active="true" anchor="bottom" id="Terminal" visible="true" weight="0.3286119" />
+      <window_info anchor="bottom" id="Terminal" visible="true" weight="0.3286119" />
       <window_info anchor="bottom" id="Event Log" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
@@ -346,7 +378,7 @@
     <entry file="file://$PROJECT_DIR$/composer.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="331">
-          <caret line="65" column="9" selection-start-line="65" selection-start-column="9" selection-end-line="65" selection-end-column="9" />
+          <caret line="66" column="9" selection-start-line="66" selection-start-column="9" selection-end-line="66" selection-end-column="9" />
         </state>
       </provider>
     </entry>
@@ -423,6 +455,31 @@
           <caret line="17" column="45" selection-start-line="17" selection-start-column="45" selection-end-line="17" selection-end-column="45" />
         </state>
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/auth.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/app.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="239">
+          <caret line="173" column="8" selection-start-line="173" selection-start-column="8" selection-end-line="173" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/broadcasting.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-357" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.env">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="296">
+          <caret line="36" lean-forward="true" selection-start-line="36" selection-end-line="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Providers/EventServiceProvider.php">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
   </component>
 </project>
