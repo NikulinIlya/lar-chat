@@ -21,7 +21,7 @@
             <div class="offset-4 col-4">
                 <li class="list-group-item active">Chat Room</li>
                 <ul class="list-group">
-                    <message-component v-for="value in chat.message">
+                    <message-component v-for="value in chat.message" :key=value.index>
                         @{{ value }}
                     </message-component>
                 </ul>
