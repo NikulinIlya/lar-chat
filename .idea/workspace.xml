@@ -4,12 +4,7 @@
     <bookmark url="file://$PROJECT_DIR$/routes/web.php" description="&#10;Route::get('chat', function() {&#10;    return view('..." line="16" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e296b98d-071f-40a4-a5d9-90266a5ec07e" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/components/MessageComponent.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/MessageComponent.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/chat.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/chat.blade.php" afterDir="false" />
-    </list>
+    <list default="true" id="e296b98d-071f-40a4-a5d9-90266a5ec07e" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -303,12 +298,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1547803391725</updated>
-      <workItem from="1547803394117" duration="9462000" />
+      <workItem from="1547803394117" duration="10234000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="9462000" />
+    <option name="totallyTimeSpent" value="10234000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -321,7 +316,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="npm" side_tool="true" />
       <window_info id="Favorites" side_tool="true" />
