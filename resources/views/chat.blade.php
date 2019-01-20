@@ -27,7 +27,7 @@
                             :key = value.index
                             :color = chat.color[index]
                             :user = chat.user[index]
-                            >
+                            :time = chat.time[index]>
                         @{{ value }}
                     </message-component>
                 </ul>
