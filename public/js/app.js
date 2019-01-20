@@ -58852,7 +58852,8 @@ var app = new vue__WEBPACK_IMPORTED_MODULE_0___default.a({
         this.chat.user.push('you');
         this.chat.time.push(this.getTime());
         axios.post('/send', {
-          message: this.message
+          message: this.message,
+          chat: this.chat
         }).then(function (response) {
           console.log(response);
           _this.message = '';
@@ -58864,39 +58865,58 @@ var app = new vue__WEBPACK_IMPORTED_MODULE_0___default.a({
     getTime: function getTime() {
       var time = new Date();
       return time.getHours() + ':' + time.getMinutes();
+    },
+    getOldMessages: function getOldMessages() {
+      var _this2 = this;
+
+      axios.post('/getOldMessage').then(function (response) {
+        console.log(response);
+
+        if (response.data !== '') {
+          _this2.chat = response.data;
+        }
+      }).catch(function (error) {
+        console.log(error);
+      });
     }
   },
   mounted: function mounted() {
-    var _this2 = this;
+    var _this3 = this;
 
+    this.getOldMessages();
     Echo.private('chat').listen('ChatEvent', function (e) {
-      _this2.chat.message.push(e.message);
+      _this3.chat.message.push(e.message);
 
-      _this2.chat.message.push(e.user);
+      _this3.chat.message.push(e.user);
 
-      _this2.chat.color.push('warning');
+      _this3.chat.color.push('warning');
 
-      _this2.chat.time.push(_this2.getTime()); // console.log(e);
+      _this3.chat.time.push(_this3.getTime());
 
+      axios.post('/saveToSession', {
+        chat: _this3.chat
+      }).then(function (response) {}).catch(function (error) {
+        console.log(error);
+      }); // console.log(e);
     }).listenForWhisper('typing', function (e) {
       if (e.name !== '') {
-        _this2.typing = 'typing...';
+        _this3.typing = 'typing...';
       } else {
-        _this2.typing = '';
+        _this3.typing = '';
       }
     });
     Echo.join("chat").here(function (users) {
-      _this2.numberOfUsers = users.length;
+      _this3.numberOfUsers = users.length;
       console.log(users);
     }).joining(function (user) {
-      _this2.numberOfUsers++;
+      _this3.numberOfUsers++;
 
-      _this2.$toaster.success(user.name + ' is joined the chat room'); // console.log(user.name);
+      _this3.$toaster.success(user.name + ' is joined the chat room'); // console.log(user.name);
 
     }).leaving(function (user) {
-      _this2.numberOfUsers--;
+      _this3.numberOfUsers--;
 
-      _this2.$toaster.warning(user.name + ' is leaved the chat room'); // console.log(user.name);
+      _this3.$toaster.warning(user.name + ' is leaved the chat room'); // console.log(user.name);
 
     });
   }
