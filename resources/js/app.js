@@ -8,6 +8,7 @@ import VueChatScroll from 'vue-chat-scroll'
 Vue.use(VueChatScroll)
 
 import Toaster from 'v-toaster'
+import 'v-toaster/dist/v-toaster.css'
 Vue.use(Toaster, {timeout: 5000})
 
 // Vue.component('example-component', require('./components/ExampleComponent.vue').default);
@@ -82,10 +83,12 @@ const app = new Vue({
             })
             .joining((user) => {
                 this.numberOfUsers++;
+                this.$toaster.success(user.name + ' is joined the chat room');
                 // console.log(user.name);
             })
             .leaving((user) => {
                 this.numberOfUsers--;
+                this.$toaster.warning(user.name + ' is leaved the chat room');
                 // console.log(user.name);
             });
     }

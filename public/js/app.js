@@ -6047,6 +6047,25 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./node_modules/css-loader/index.js?!./node_modules/postcss-loader/src/index.js?!./node_modules/v-toaster/dist/v-toaster.css":
+/*!***********************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader??ref--6-1!./node_modules/postcss-loader/src??ref--6-2!./node_modules/v-toaster/dist/v-toaster.css ***!
+  \***********************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(/*! ../../css-loader/lib/css-base.js */ "./node_modules/css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, ".v-toaster{position:fixed;top:50px;right:0;z-index:10000;width:300px;padding-left:10px;padding-right:10px}.v-toaster .v-toast{margin-bottom:10px;transition:all .3s ease;border:1px solid #454d5d;border-radius:8px;color:#fff;display:block;padding:1rem;background:rgba(69,77,93,.9);border-color:#454d5d}.v-toaster .v-toast.v-toast-enter,.v-toaster .v-toast.v-toast-leave-to{-webkit-transform:translate(100%);transform:translate(100%)}.v-toaster .v-toast.v-toast-success{background:rgba(50,182,67,.9);border-color:#32b643}.v-toaster .v-toast.v-toast-warning{background:rgba(255,183,0,.9);border-color:#ffb700}.v-toaster .v-toast.v-toast-info{background:rgba(91,192,222,.9);border-color:#5bc0de}.v-toaster .v-toast.v-toast-error{background:rgba(232,86,0,.9);border-color:#e85600}.v-toaster .v-toast.v-toast-primary{background:rgba(66,139,202,.9);border-color:#428bca}.v-toaster .v-toast .v-toast-btn-clear{background:transparent;border:0;color:currentColor;opacity:.45;text-decoration:none;float:right;cursor:pointer}.v-toaster .v-toast .v-toast-btn-clear:hover{opacity:.85}.v-toaster .v-toast .v-toast-btn-clear:before{content:\"\\2715\"}@media (max-width:300px){.v-toaster{width:100%}}", ""]);
+
+// exports
+
+
+/***/ }),
+
 /***/ "./node_modules/css-loader/index.js?!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/MessageComponent.vue?vue&type=style&index=0&lang=css&":
 /*!**********************************************************************************************************************************************************************************************************************************************************************************!*\
   !*** ./node_modules/css-loader??ref--6-1!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src??ref--6-2!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/MessageComponent.vue?vue&type=style&index=0&lang=css& ***!
@@ -47362,6 +47381,36 @@ exports.clearImmediate = (typeof self !== "undefined" && self.clearImmediate) ||
 
 /***/ }),
 
+/***/ "./node_modules/v-toaster/dist/v-toaster.css":
+/*!***************************************************!*\
+  !*** ./node_modules/v-toaster/dist/v-toaster.css ***!
+  \***************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+
+var content = __webpack_require__(/*! !../../css-loader??ref--6-1!../../postcss-loader/src??ref--6-2!./v-toaster.css */ "./node_modules/css-loader/index.js?!./node_modules/postcss-loader/src/index.js?!./node_modules/v-toaster/dist/v-toaster.css");
+
+if(typeof content === 'string') content = [[module.i, content, '']];
+
+var transform;
+var insertInto;
+
+
+
+var options = {"hmr":true}
+
+options.transform = transform
+options.insertInto = undefined;
+
+var update = __webpack_require__(/*! ../../style-loader/lib/addStyles.js */ "./node_modules/style-loader/lib/addStyles.js")(content, options);
+
+if(content.locals) module.exports = content.locals;
+
+if(false) {}
+
+/***/ }),
+
 /***/ "./node_modules/v-toaster/dist/v-toaster.js":
 /*!**************************************************!*\
   !*** ./node_modules/v-toaster/dist/v-toaster.js ***!
@@ -58758,12 +58807,15 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var vue_chat_scroll__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(vue_chat_scroll__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var v_toaster__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! v-toaster */ "./node_modules/v-toaster/dist/v-toaster.js");
 /* harmony import */ var v_toaster__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(v_toaster__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var v_toaster_dist_v_toaster_css__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! v-toaster/dist/v-toaster.css */ "./node_modules/v-toaster/dist/v-toaster.css");
+/* harmony import */ var v_toaster_dist_v_toaster_css__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(v_toaster_dist_v_toaster_css__WEBPACK_IMPORTED_MODULE_3__);
 __webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js");
 
 window.Vue = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.common.js");
 
 
 vue__WEBPACK_IMPORTED_MODULE_0___default.a.use(vue_chat_scroll__WEBPACK_IMPORTED_MODULE_1___default.a);
+
 
 vue__WEBPACK_IMPORTED_MODULE_0___default.a.use(v_toaster__WEBPACK_IMPORTED_MODULE_2___default.a, {
   timeout: 5000
@@ -58837,9 +58889,15 @@ var app = new vue__WEBPACK_IMPORTED_MODULE_0___default.a({
       _this2.numberOfUsers = users.length;
       console.log(users);
     }).joining(function (user) {
-      _this2.numberOfUsers++; // console.log(user.name);
+      _this2.numberOfUsers++;
+
+      _this2.$toaster.success(user.name + ' is joined the chat room'); // console.log(user.name);
+
     }).leaving(function (user) {
-      _this2.numberOfUsers--; // console.log(user.name);
+      _this2.numberOfUsers--;
+
+      _this2.$toaster.warning(user.name + ' is leaved the chat room'); // console.log(user.name);
+
     });
   }
 });
