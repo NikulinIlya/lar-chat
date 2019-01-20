@@ -42,6 +42,11 @@ class ChatController extends Controller
         return session('chat');
     }
 
+    public function deleteSession()
+    {
+        session()->forget('chat');
+    }
+
     /*public function send(Request $request)
     {
         $message = 'Hello';
