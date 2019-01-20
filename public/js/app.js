@@ -58883,7 +58883,7 @@ var app = new vue__WEBPACK_IMPORTED_MODULE_0___default.a({
       var _this3 = this;
 
       axios.post('/deleteSession').then(function (response) {
-        _this3.$toaster.success('Chat history is deleted');
+        return _this3.$toaster.success('Chat history is deleted');
       });
     }
   },
@@ -58913,17 +58913,16 @@ var app = new vue__WEBPACK_IMPORTED_MODULE_0___default.a({
       }
     });
     Echo.join("chat").here(function (users) {
-      _this4.numberOfUsers = users.length;
-      console.log(users);
+      _this4.numberOfUsers = users.length; // console.log(users)
     }).joining(function (user) {
       _this4.numberOfUsers++;
 
-      _this4.$toaster.success(user.name + ' is joined the chat room'); // console.log(user.name);
+      _this4.$toaster.success(user.name + ' has joined the chat room'); // console.log(user.name);
 
     }).leaving(function (user) {
       _this4.numberOfUsers--;
 
-      _this4.$toaster.warning(user.name + ' is leaved the chat room'); // console.log(user.name);
+      _this4.$toaster.warning(user.name + ' has leaved the chat room'); // console.log(user.name);
 
     });
   }

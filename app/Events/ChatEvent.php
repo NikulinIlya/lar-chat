@@ -15,8 +15,8 @@ class ChatEvent implements ShouldBroadcast
 {
     use Dispatchable, InteractsWithSockets, SerializesModels;
 
-    private $message;
-    private $user;
+    public $message;
+    public $user;
 
     /**
      * Create a new event instance.

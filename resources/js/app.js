@@ -74,9 +74,7 @@ const app = new Vue({
         },
         deleteSession() {
             axios.post('/deleteSession')
-                .then(response => {
-                    this.$toaster.success('Chat history is deleted');
-                });
+                .then(response => this.$toaster.success('Chat history is deleted'));
         }
     },
     mounted() {
@@ -92,7 +90,6 @@ const app = new Vue({
                     chat : this.chat
                 })
                     .then(response => {
-
                     })
                     .catch(error => {
                         console.log(error);
@@ -106,19 +103,20 @@ const app = new Vue({
                     this.typing = ''
                 }
             });
+
         Echo.join(`chat`)
             .here((users) => {
                 this.numberOfUsers = users.length;
-                console.log(users)
+                // console.log(users)
             })
             .joining((user) => {
                 this.numberOfUsers++;
-                this.$toaster.success(user.name + ' is joined the chat room');
+                this.$toaster.success(user.name + ' has joined the chat room');
                 // console.log(user.name);
             })
             .leaving((user) => {
                 this.numberOfUsers--;
-                this.$toaster.warning(user.name + ' is leaved the chat room');
+                this.$toaster.warning(user.name + ' has leaved the chat room');
                 // console.log(user.name);
             });
     }
