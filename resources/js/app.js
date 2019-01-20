@@ -7,6 +7,9 @@ import Vue from 'vue'
 import VueChatScroll from 'vue-chat-scroll'
 Vue.use(VueChatScroll)
 
+import Toaster from 'v-toaster'
+Vue.use(Toaster, {timeout: 5000})
+
 // Vue.component('example-component', require('./components/ExampleComponent.vue').default);
 Vue.component('message-component', require('./components/MessageComponent.vue').default);
 
