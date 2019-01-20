@@ -20,7 +20,8 @@ const app = new Vue({
             color: [],
             time: []
         },
-        typing:''
+        typing:'',
+        numberOfUsers: 0
     },
     watch: {
         message() {
@@ -70,6 +71,19 @@ const app = new Vue({
                 } else {
                     this.typing = ''
                 }
+            });
+        Echo.join(`chat`)
+            .here((users) => {
+                this.numberOfUsers = users.length;
+                console.log(users)
+            })
+            .joining((user) => {
+                this.numberOfUsers++;
+                // console.log(user.name);
+            })
+            .leaving((user) => {
+                this.numberOfUsers--;
+                // console.log(user.name);
             });
     }
 });
